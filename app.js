@@ -9,12 +9,12 @@ app.get('/', (req, res) => {
 
 app.get('/about', (req, res) => {
 
-    res.sendFile(__dirname + "/about.html");
+    res.sendFile(__dirname + "/views/about.html");
 });
 
 app.get('/contact', (req, res) => {
 
-    res.sendFile(__dirname + "/contact.html");
+    res.sendFile(__dirname + "/views/contact.html");
 });
 
 
