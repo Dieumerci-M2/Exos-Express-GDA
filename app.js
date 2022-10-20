@@ -2,20 +2,24 @@ const express = require('express');
 const app = express();
 const port = 8000;
 
+app.set('view engine', 'ejs')
+
+app.set('views', './views')
+
 app.get('/', (req, res) => {
 
-    res.sendFile(__dirname + "/views/index.html");
+    res.render('home');
 });
+
 
 app.get('/about', (req, res) => {
 
-    res.sendFile(__dirname + "/views/about.html");
+    res.render('about');
 });
 
 app.get('/contact', (req, res) => {
 
-    res.sendFile(__dirname + "/views/contact.html");
+    res.render('contact');
 });
-
 
 app.listen(port, ()=> console.log( `Notre app est lancée sur : http://localhost:${port}`)) 
