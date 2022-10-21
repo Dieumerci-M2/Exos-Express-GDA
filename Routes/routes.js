@@ -1,24 +1,19 @@
 const express = require('express')
 
 const router = express.Router();
-
-const btn1 = 'Home' 
-const btn2 = 'About'
-const btn3 = 'Contact'
-const title = 'backend'
-
+const title = 'Backend'
 router.get('/', (req, res)=>{
-    res.render('home', {btn2, btn3, title}); 
+    res.render('home', {btn2 : 'About', btn3: 'Contact', title}); 
 })
 
 router.get('/about', (req, res) => {
 
-    res.render('about', {btn1, btn3, title});
+    res.render('about', {btn1 : 'Home', btn3: 'Contact', title});
 });
 
 router.get('/contact', (req, res) => {
 
-    res.render('contact', {btn1, btn2, title});
+    res.render('contact', {btn1: 'Home', btn2: 'About', title});
 });
 
 module.exports = router

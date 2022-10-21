@@ -1,0 +1,11 @@
+body{
+    background-color: #121212;
+}
+
+header{
+    position: absolute;
+    top:0;
+    background-color: #121212;
+    width: 100vh;
+    height: 30px;
+}
